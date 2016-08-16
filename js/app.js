@@ -9,81 +9,84 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         .when('/', {
             templateUrl: 'home.html'
         })
-    .when('/home', {
+        .when('/home', {
             templateUrl: 'home.html'
         })
-     .when('/index', {
-        templateUrl: 'home.html'
-    })
-      .when('/leranIt', {
-        templateUrl: 'leranIt.html'
-    })
-      .when('/services', {
+        .when('/index', {
+            templateUrl: 'home.html'
+        })
+    
+        .when('/signUp', {
+            templateUrl: 'signUp.html'
+        })
+        .when('/leranIt', {
+            templateUrl: 'leranIt.html'
+        })
+        .when('/services', {
             templateUrl: 'services.html'
         })
-     .when('/aboutUs', {
+        .when('/aboutUs', {
             templateUrl: 'aboutUs.html'
         })
-     .when('/blog-item', {
-            templateUrl: 'blog-item.html'
-        })
-    .when('/pricing', {
+//        .when('/blog-item', {
+//            templateUrl: 'blog-item.html'
+//        })
+        .when('/pricing', {
             templateUrl: 'pricing.html'
         })
-     .when('/404', {
+        .when('/404', {
             templateUrl: '404.html'
         })
-     .when('/shortcodes', {
+        .when('/shortcodes', {
             templateUrl: 'shortcodes.html'
         })
-     .when('/blog', {
+        .when('/blog', {
             templateUrl: 'blog.html'
         })
-     .when('/contactUs', {
+        .when('/contactUs', {
             templateUrl: 'contact-us.html'
         })
-    .otherwise({
-			templateUrl: '404.html'
-		});
+        .otherwise({
+            templateUrl: '404.html'
+        });
   }]);
 
 
-myApp.controller('contactUSController', function($scope) {
-       
-          if (navigator.geolocation)
-            {
-                navigator.geolocation.getCurrentPosition(showCurrentLocation);
-            }
-            else
-            {
-               alert("Geolocation API not supported.");
-            }
+myApp.controller('contactUSController', function ($scope) {
 
-            function showCurrentLocation(position)
-            {
-                var latitude =15.365805; //position.coords.latitude; 
-                var longitude =  73.933536; //position.coords.longitude;
-                var coords = new google.maps.LatLng(latitude, longitude);
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showCurrentLocation);
+    } else {
+        alert("Geolocation API not supported.");
+    }
 
-                var mapOptions = {
-                zoom: 11,
-                center: coords,
-                mapTypeControl: true,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
+    function showCurrentLocation(position) {
+        var latitude = 15.365805; //position.coords.latitude; 
+        var longitude = 73.933536; //position.coords.longitude;
+        var coords = new google.maps.LatLng(latitude, longitude);
 
-            //create the map, and place it in the HTML map div
-            map = new google.maps.Map(
+        var mapOptions = {
+            zoom: 11
+            , center: coords
+            , mapTypeControl: true
+            , mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        //create the map, and place it in the HTML map div
+        map = new google.maps.Map(
             document.getElementById("map"), mapOptions
-            );
+        );
 
-            //place the initial marker
-            var marker = new google.maps.Marker({
-            position: coords,
-            map: map,
-            title: "Current location!"
-            });
-            }
-    
-    
+        //place the initial marker
+        var marker = new google.maps.Marker({
+            position: coords
+            , map: map
+            , title: "Current location!"
+        });
+    }
+
+
 });
+
+
+angular.module('myApp').value('$anchorScroll', angular.noop);
