@@ -47,7 +47,7 @@
         
      #reg_form   .testbox {
             margin: 20px ;
-            width: auto;
+            width: 500px;
             height: auto;
             -webkit-border-radius: 8px/7px;
             -moz-border-radius: 8px/7px;
@@ -57,6 +57,7 @@
             -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
             box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
             border: solid 1px #cbc9c9;
+         margin-left:29% ;
         }
         
      #reg_form   input[type=radio] {
@@ -105,5 +106,7 @@
         }
         
 
+// user css
+.inputStyle {border-radius: 10px ; border-style: groove; background-color: bisque}
         
   
