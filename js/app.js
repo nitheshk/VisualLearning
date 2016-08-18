@@ -2,7 +2,7 @@ var myApp = angular.module("myApp", ['ngRoute']);
 myApp.controller("myContoller", function ($scope) {
 
 });
-
+angular.module('myApp').value('$anchorScroll', angular.noop);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
@@ -15,8 +15,8 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         .when('/index', {
             templateUrl: 'home.html'
         })
-    
-        .when('/signUp', {
+
+    .when('/signUp', {
             templateUrl: 'signUp.html'
         })
         .when('/leranIt', {
@@ -28,9 +28,6 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         .when('/aboutUs', {
             templateUrl: 'aboutUs.html'
         })
-//        .when('/blog-item', {
-//            templateUrl: 'blog-item.html'
-//        })
         .when('/pricing', {
             templateUrl: 'pricing.html'
         })
@@ -89,4 +86,9 @@ myApp.controller('contactUSController', function ($scope) {
 });
 
 
-angular.module('myApp').value('$anchorScroll', angular.noop);
+
+myApp.controller('navController', function ($scope) {
+    $scope.navStyleChange = function (event) {
+        $scope.activeMenu = event.target.id;
+    };
+});
