@@ -1,0 +1,51 @@
+    <section id="portfolio">
+        <div class="container">
+            <div class="center">
+               <h2>Portfolio</h2>
+               <p class="lead">portfolio of the web site .........................</p>
+            </div>
+        
+
+            <ul class="portfolio-filter text-center">
+                <li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Creative</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".html">Photography</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Web Development</a></li>
+            </ul><!--/#portfolio-filter-->
+            <br>
+            
+            <div>
+                
+                    <label>Search:</label>
+                    <input ng-model="searchKey" />
+                
+
+                
+                    Sort by:
+                    <select ng-model="sortKey">
+                        <option value="title">Alphabetical</option>
+                        <option value="category">category</option>
+                    </select>
+                
+
+            </div>
+
+            <div class="row">
+                <div class="portfolio-items"  ng-repeat="tutorial in tutorials|filter:{title:searchKey}|orderBy:sortKey">
+                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">{{tutorial.title}}</a></h3>
+                                    <p>{{tutorial.text}}</p>
+                                    <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+                </div>
+            </div>
+        </div>
+    </section><!--/#portfolio-item-->
+    

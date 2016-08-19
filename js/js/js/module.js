@@ -1,0 +1,1 @@
+angular.module('visualLearningApp', ["ui.router", "ngSanitize"]);
