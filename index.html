@@ -14,7 +14,7 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+   <link href="css/responsive.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -31,21 +31,10 @@
 
     <!--     dependencies addded by AL-->
 
-    <link rel="stylesheet" href="js/js/components/bootstrap/dist/css/bootstrap.css" />
+<!--    <link rel="stylesheet" href="js/js/components/bootstrap/dist/css/bootstrap.css" />-->
 
-    <script src="js/js/components/jquery/dist/jquery.js"></script>
-    <script src="js/js/components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/js/components/angular/angular.js"></script>
-    <script src="js/js/components/angular-animate/angular-animate.js"></script>
-    <script src="js/js/components/angular-resource/angular-resource.js"></script>
-    <script src="js/js/components/angular-route/angular-route.js"></script>
-    <script src="js/js/components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="js/js/js/module.js"></script>
-    <script src="js/js/js/routes.js"></script>
-    <script src="js/js/js/controllers/master-ctrl.js"></script>
-    <script src="js/js/components/angular-ui-router.js"></script>
-    <script src="js/js/js/controllers/detailsController.js"></script>
-    <script src="js/js/js/controllers/nav-controller.js"></script>
+
+ 
 
 
 </head>
@@ -59,7 +48,7 @@
                     <div class="col-sm-6 col-xs-4">
                         <div class="top-number">
                             <p><i class="fa fa-phone-square"></i> +91 9876543210</p>
-                        </div>
+                        </div>  
                     </div>
                     <div class="col-sm-6 col-xs-8">
                         <div class="social">
@@ -99,25 +88,25 @@
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li ng-class="{active : activeMenu === 'nava1'}"><a id="nava1" href="#index" ng-click="navStyleChange($event)">Home</a></li>
-
+                        
                         <li ng-class="{active : activeMenu === 'nava2'}"><a id="nava2" href="#aboutUs" ng-click="navStyleChange($event)">About Us</a></li>
-
+                        
                         <li ng-class="{active : activeMenu === 'nava3'}"><a id="nava3" href="#services" ng-click="navStyleChange($event)">Services</a></li>
-
+                        
                         <li ng-class="{active : activeMenu === 'nava4'}"><a id="nava4" href="#leranIt" ng-click="navStyleChange($event)">Leran It</a></li>
-
-                        <li class="dropdown">
+                        
+                        <li class="dropdown" >
                             <a class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li ng-class="{active : activeMenu === 'nava5'}"><a id="nava5" href="#pricing" ng-click="navStyleChange($event)">Pricing</a></li>
-                                <li ng-class="{active : activeMenu === 'nava6'}"><a id="nava6" href="#404" ng-click="navStyleChange($event)">404</a></li>
+<!--                                <li ng-class="{active : activeMenu === 'nava5'}"><a id="nava5" href="#pricing" ng-click="navStyleChange($event)">Pricing</a></li>-->
+<!--                                <li ng-class="{active : activeMenu === 'nava6'}"><a id="nava6" href="#404" ng-click="navStyleChange($event)">404</a></li>-->
                                 <li ng-class="{active : activeMenu === 'nava7'}"><a id="nava7" href="#signUp" ng-click="navStyleChange($event)">signUp</a></li>
-                                <li ng-class="{active : activeMenu === 'nava8'}"><a id="nava8" href="#shortcodes" ng-click="navStyleChange($event)">Shortcodes</a></li>
+<!--                                <li ng-class="{active : activeMenu === 'nava8'}"><a id="nava8" href="#shortcodes" ng-click="navStyleChange($event)">Shortcodes</a></li>-->
                             </ul>
                         </li>
-
-                        <li ng-class="{active : activeMenu === 'nava9'}"><a id="nava9" href="#blog" ng-click="navStyleChange($event)">Blog</a></li>
-
+                        
+<!--                        <li ng-class="{active : activeMenu === 'nava9'}"><a id="nava9" href="#blog" ng-click="navStyleChange($event)">Blog</a></li>-->
+                        
                         <li ng-class="{active : activeMenu === 'nava10'}"><a id="nava10" href="#contactUs" ng-click="navStyleChange($event)">Contact</a></li>
                     </ul>
                 </div>
@@ -126,7 +115,7 @@
         </nav>
         <!--/nav-->
 
-    </header>
+    </header>   
     <!--/header-->
 
 
@@ -151,13 +140,11 @@
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-5">
                     <div class="widget">
                         <h3>Company</h3>
                         <ul>
                             <li><a href="#">About us</a></li>
-                            <li><a href="#">We are hiring</a></li>
-                            <li><a href="#">Meet the team</a></li>
                             <li><a href="#">Copyright</a></li>
                             <li><a href="#">Terms of use</a></li>
                             <li><a href="#">Privacy policy</a></li>
@@ -167,7 +154,7 @@
                 </div>
                 <!--/.col-md-3-->
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-5">
                     <div class="widget">
                         <h3>Support</h3>
                         <ul>
@@ -175,45 +162,26 @@
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Forum</a></li>
                             <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Refund policy</a></li>
-                            <li><a href="#">Ticket system</a></li>
-                            <li><a href="#">Billing system</a></li>
                         </ul>
                     </div>
                 </div>
                 <!--/.col-md-3-->
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-5">
                     <div class="widget">
                         <h3>Developers</h3>
                         <ul>
                             <li><a href="#">Web Development</a></li>
-                            <li><a href="#">SEO Marketing</a></li>
                             <li><a href="#">Theme</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Email Marketing</a></li>
-                            <li><a href="#">Plugin Development</a></li>
-                            <li><a href="#">Article Writing</a></li>
+                            <li><a href="#">Releases</a></li>
+                            <li><a href="#">New Updates</a></li>
+                            <li><a href="#">Articles</a></li>
                         </ul>
                     </div>
                 </div>
                 <!--/.col-md-3-->
 
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Our Partners</h3>
-                        <ul>
-                            <li><a href="#">Adipisicing Elit</a></li>
-                            <li><a href="#">Eiusmod</a></li>
-                            <li><a href="#">Tempor</a></li>
-                            <li><a href="#">Veniam</a></li>
-                            <li><a href="#">Exercitation</a></li>
-                            <li><a href="#">Ullamco</a></li>
-                            <li><a href="#">Laboris</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--/.col-md-3-->
+                
             </div>
         </div>
     </section>
@@ -223,7 +191,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+                    &copy; 2016 <a target="_blank" href="#" title="">Visual Learning</a>. All Rights Reserved.
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right">
@@ -242,10 +210,25 @@
     <!--/#footer-->
 
     <!--    Script -->
+    <script src="js/js/components/jquery/dist/jquery.js"></script>
+    <script src="js/js/components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+    
+    
+    <script src="js/js/components/angular/angular.js"></script>
+    <script src="js/js/components/angular-animate/angular-animate.js"></script>
+    <script src="js/js/components/angular-resource/angular-resource.js"></script>
+    <script src="js/js/components/angular-route/angular-route.js"></script>
+    <script src="js/js/components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="js/js/js/module.js"></script>
+    <script src="js/js/js/routes.js"></script>
+    <script src="js/js/js/controllers/master-ctrl.js"></script>
+    <script src="js/js/components/angular-ui-router.js"></script>
+    <script src="js/js/js/controllers/detailsController.js"></script>
+    <script src="js/js/js/controllers/nav-controller.js"></script>
     <!--    Script End -->
 
 
