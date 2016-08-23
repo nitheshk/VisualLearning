@@ -54,6 +54,10 @@ config(['$stateProvider', '$urlRouterProvider'
                 url: "/services"
                 , templateUrl: 'templates/services.html'
             })
+          .state('visdom', {
+                url: "/visdom"
+                , templateUrl: 'templates/visdom.html'
+            })
             .state('pricing', {
                 url: "/pricing"
                 , templateUrl: 'templates/pricing.html'
