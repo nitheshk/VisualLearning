@@ -41,3 +41,5 @@ angular.module("visualLearningApp").controller('MasterCtrl', ['$scope','$http', 
     }
 
 }])
+
+angular.module('visualLearningApp').value('$anchorScroll', angular.noop);
